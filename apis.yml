@@ -20,6 +20,10 @@ url: >-
 specificationVersion: '0.19'
 apis: []
 common:
+  - type: GitHubOrganization
+    url: https://github.com/FirstSolar
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/first-solar
   - type: Website
     url: https://www.firstsolar.com
 maintainers:
