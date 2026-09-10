@@ -1,0 +1,28 @@
+generated: '2026-09-10'
+method: searched
+source: npm, PyPI, RubyGems, crates.io, Maven Central, NuGet and pkg.go.dev registry search
+package_count: 0
+packages: []
+note: 'No first-party First Solar client library exists on any public registry. Searched npm (text=firstsolar
+  -> 0 results; text=''first solar'' -> only unrelated icon/calendar packages), PyPI (firstsolar, first-solar,
+  fslr -> 404), RubyGems (firstsolar -> 404) and crates.io (firstsolar -> 0). Note for future rounds:
+  the PyPI package ''plantpredict'' is NOT First Solar''s. PlantPredict was First Solar''s utility-scale
+  energy modelling tool but was acquired by Terabase Energy in October 2021; the package metadata now
+  points at https://ui.plantpredict.terabase.energy and the docs at docs.plantpredict.com are Terabase-branded,
+  so it must be catalogued against Terabase, not First Solar.'
+x-evidence:
+- registry: npm
+  query: firstsolar
+  results: 0
+- registry: pypi
+  query: firstsolar
+  http_status: 404
+- registry: pypi
+  query: first-solar
+  http_status: 404
+- registry: rubygems
+  query: firstsolar
+  http_status: 404
+- registry: crates.io
+  query: firstsolar
+  results: 0

@@ -1,0 +1,200 @@
+generated: '2026-09-10'
+method: probed
+source: https://portal.firstsolar.com/.well-known/openid-configuration
+docs: https://portal.firstsolar.com/developer/PortalCustomLogin
+note: 'Served by the Salesforce Experience Cloud tenant that runs the First Solar Developer Portal (portal.firstsolar.com)
+  — First Solar''s own host and its own OIDC issuer. The endpoints and the scope vocabulary are Salesforce
+  platform-standard, not a First Solar-authored API contract: First Solar publishes no API product of
+  its own. Recorded because it is a real, unauthenticated, machine-readable document the provider serves.
+  The scope names below are Salesforce''s platform scope vocabulary as advertised by this tenant''s discovery
+  document; they are not First Solar product scopes. No scope reference page is published — the Developer
+  Portal is behind a login.'
+schemes:
+- name: OAuth2
+  source: well-known/first-solar-openid-configuration.json
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://portal.firstsolar.com/developer/services/oauth2/authorize
+    tokenUrl: https://portal.firstsolar.com/developer/services/oauth2/token
+scope_count: 36
+scopes:
+- scope: address
+  flows:
+  - authorizationCode
+  sources:
+  - well-known/first-solar-openid-configuration.json
+- scope: api
+  flows:
+  - authorizationCode
+  sources:
+  - well-known/first-solar-openid-configuration.json
+- scope: cdp_api
+  flows:
+  - authorizationCode
+  sources:
+  - well-known/first-solar-openid-configuration.json
+- scope: cdp_calculated_insight_api
+  flows:
+  - authorizationCode
+  sources:
+  - well-known/first-solar-openid-configuration.json
+- scope: cdp_identityresolution_api
+  flows:
+  - authorizationCode
+  sources:
+  - well-known/first-solar-openid-configuration.json
+- scope: cdp_ingest_api
+  flows:
+  - authorizationCode
+  sources:
+  - well-known/first-solar-openid-configuration.json
+- scope: cdp_profile_api
+  flows:
+  - authorizationCode
+  sources:
+  - well-known/first-solar-openid-configuration.json
+- scope: cdp_query_api
+  flows:
+  - authorizationCode
+  sources:
+  - well-known/first-solar-openid-configuration.json
+- scope: cdp_segment_api
+  flows:
+  - authorizationCode
+  sources:
+  - well-known/first-solar-openid-configuration.json
+- scope: chatbot_api
+  flows:
+  - authorizationCode
+  sources:
+  - well-known/first-solar-openid-configuration.json
+- scope: chatter_api
+  flows:
+  - authorizationCode
+  sources:
+  - well-known/first-solar-openid-configuration.json
+- scope: content
+  flows:
+  - authorizationCode
+  sources:
+  - well-known/first-solar-openid-configuration.json
+- scope: custom_permissions
+  flows:
+  - authorizationCode
+  sources:
+  - well-known/first-solar-openid-configuration.json
+- scope: data_cloud_user_claims
+  flows:
+  - authorizationCode
+  sources:
+  - well-known/first-solar-openid-configuration.json
+- scope: eclair_api
+  flows:
+  - authorizationCode
+  sources:
+  - well-known/first-solar-openid-configuration.json
+- scope: einstein_gpt_api
+  flows:
+  - authorizationCode
+  sources:
+  - well-known/first-solar-openid-configuration.json
+- scope: email
+  flows:
+  - authorizationCode
+  sources:
+  - well-known/first-solar-openid-configuration.json
+- scope: forgot_password
+  flows:
+  - authorizationCode
+  sources:
+  - well-known/first-solar-openid-configuration.json
+- scope: full
+  flows:
+  - authorizationCode
+  sources:
+  - well-known/first-solar-openid-configuration.json
+- scope: id
+  flows:
+  - authorizationCode
+  sources:
+  - well-known/first-solar-openid-configuration.json
+- scope: interaction_api
+  flows:
+  - authorizationCode
+  sources:
+  - well-known/first-solar-openid-configuration.json
+- scope: lightning
+  flows:
+  - authorizationCode
+  sources:
+  - well-known/first-solar-openid-configuration.json
+- scope: mcp_api
+  flows:
+  - authorizationCode
+  sources:
+  - well-known/first-solar-openid-configuration.json
+- scope: offline_access
+  flows:
+  - authorizationCode
+  sources:
+  - well-known/first-solar-openid-configuration.json
+- scope: openid
+  flows:
+  - authorizationCode
+  sources:
+  - well-known/first-solar-openid-configuration.json
+- scope: pardot_api
+  flows:
+  - authorizationCode
+  sources:
+  - well-known/first-solar-openid-configuration.json
+- scope: phone
+  flows:
+  - authorizationCode
+  sources:
+  - well-known/first-solar-openid-configuration.json
+- scope: profile
+  flows:
+  - authorizationCode
+  sources:
+  - well-known/first-solar-openid-configuration.json
+- scope: pwdless_login_api
+  flows:
+  - authorizationCode
+  sources:
+  - well-known/first-solar-openid-configuration.json
+- scope: refresh_token
+  flows:
+  - authorizationCode
+  sources:
+  - well-known/first-solar-openid-configuration.json
+- scope: scrt_api
+  flows:
+  - authorizationCode
+  sources:
+  - well-known/first-solar-openid-configuration.json
+- scope: sfap_api
+  flows:
+  - authorizationCode
+  sources:
+  - well-known/first-solar-openid-configuration.json
+- scope: user_registration_api
+  flows:
+  - authorizationCode
+  sources:
+  - well-known/first-solar-openid-configuration.json
+- scope: visualforce
+  flows:
+  - authorizationCode
+  sources:
+  - well-known/first-solar-openid-configuration.json
+- scope: wave_api
+  flows:
+  - authorizationCode
+  sources:
+  - well-known/first-solar-openid-configuration.json
+- scope: web
+  flows:
+  - authorizationCode
+  sources:
+  - well-known/first-solar-openid-configuration.json

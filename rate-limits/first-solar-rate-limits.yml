@@ -1,0 +1,11 @@
+generated: '2026-09-10'
+method: searched
+source: https://www.firstsolar.com/ sitemap.xml walk (90 URLs) and the portal.firstsolar.com login-gated
+  Developer Portal
+limit_count: 0
+rate_limits: []
+headers: []
+note: No published rate limits. First Solar exposes no public API and no developer documentation, so there
+  is no documented limit, window, burst or exhaustion status code to record. The only live unauthenticated
+  endpoints found (the Developer Portal OIDC discovery document and JWKS on portal.firstsolar.com) return
+  no RateLimit-* or X-RateLimit-* response headers. An honest zero.

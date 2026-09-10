@@ -1,0 +1,262 @@
+generated: '2026-09-10'
+method: probed
+source: live GET of the named /.well-known path list on every First Solar host that resolves publicly
+summary: 'One real document found across five hosts: the OpenID Connect discovery document served by the
+  Salesforce Experience Cloud tenant behind the First Solar Developer Portal (portal.firstsolar.com).
+  The corporate site (Sitecore), the internal Entra-gated dashboard and the Q4 investor site are all catch-alls
+  whose 200s are soft-404 shells, verified with a per-host negative control.'
+hosts:
+- host: https://firstsolar.com
+  hit_count: 0
+  path_echo_control: passed
+  soft_404_control:
+    path: /.well-known/first-solar-negative-control-7f3ab91c.json
+    status: 404
+    bytes: 1245
+  note: 'Sitecore catch-all: every unknown path 302s to /404?item=... and renders the branded 404 page
+    (26,507 bytes). The four 200s are that soft-404, not documents.'
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 200
+    note: soft-404 / catch-all HTML shell — not a document
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    note: soft-404 / catch-all HTML shell — not a document
+  - path: /.well-known/oauth-protected-resource
+    status: 200
+    note: soft-404 / catch-all HTML shell — not a document
+  - path: /.well-known/api-catalog
+    status: 200
+    note: soft-404 / catch-all HTML shell — not a document
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/ucp.json
+    status: 404
+  - path: /.well-known/acp.json
+    status: 404
+  - path: /.well-known/aauth-resource.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /.well-known/apis.json
+    status: 404
+  - path: /apis.json
+    status: 404
+  - path: /apis.yml
+    status: 404
+- host: https://www.firstsolar.com
+  hit_count: 0
+  path_echo_control: passed
+  soft_404_control:
+    path: /.well-known/first-solar-negative-control-7f3ab91c.json
+    status: 404
+    bytes: 1245
+  note: 'Sitecore catch-all: every unknown path 302s to /404?item=... and renders the branded 404 page
+    (26,507 bytes). The four 200s are that soft-404, not documents.'
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 200
+    note: soft-404 / catch-all HTML shell — not a document
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    note: soft-404 / catch-all HTML shell — not a document
+  - path: /.well-known/oauth-protected-resource
+    status: 200
+    note: soft-404 / catch-all HTML shell — not a document
+  - path: /.well-known/api-catalog
+    status: 200
+    note: soft-404 / catch-all HTML shell — not a document
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/ucp.json
+    status: 404
+  - path: /.well-known/acp.json
+    status: 404
+  - path: /.well-known/aauth-resource.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /.well-known/apis.json
+    status: 404
+  - path: /apis.json
+    status: 404
+  - path: /apis.yml
+    status: 404
+- host: https://portal.firstsolar.com
+  hit_count: 1
+  path_echo_control: catch-all-200
+  soft_404_control:
+    path: /.well-known/first-solar-negative-control-7f3ab91c.json
+    status: 200
+    bytes: 12619
+  note: 'Salesforce Experience Cloud. Unknown paths return HTTP 200 carrying the ''Developer Portal Login''
+    HTML (~12.5KB), so the negative control passes 200 — it is a soft-404 catch-all, NOT a path-echoing
+    host: it does not synthesise a valid document per path. The one real document is /.well-known/openid-configuration,
+    which returns application/json with issuer + jwks_uri and is byte-distinct from the login shell.'
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    note: soft-404 / catch-all HTML shell — not a document
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: first-solar-openid-configuration.json
+    content_type: application/json
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    note: soft-404 / catch-all HTML shell — not a document
+  - path: /.well-known/oauth-protected-resource
+    status: 200
+    note: soft-404 / catch-all HTML shell — not a document
+  - path: /.well-known/api-catalog
+    status: 200
+    note: soft-404 / catch-all HTML shell — not a document
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    note: soft-404 / catch-all HTML shell — not a document
+  - path: /.well-known/ucp.json
+    status: 200
+    note: soft-404 / catch-all HTML shell — not a document
+  - path: /.well-known/acp.json
+    status: 200
+    note: soft-404 / catch-all HTML shell — not a document
+  - path: /.well-known/aauth-resource.json
+    status: 200
+    note: soft-404 / catch-all HTML shell — not a document
+  - path: /.well-known/agent-card.json
+    status: 200
+    note: soft-404 / catch-all HTML shell — not a document
+  - path: /.well-known/agent.json
+    status: 200
+    note: soft-404 / catch-all HTML shell — not a document
+  - path: /.well-known/apis.json
+    status: 200
+    note: soft-404 / catch-all HTML shell — not a document
+  - path: /apis.json
+    status: 200
+    note: soft-404 / catch-all HTML shell — not a document
+  - path: /apis.yml
+    status: 200
+    note: soft-404 / catch-all HTML shell — not a document
+- host: https://360dashboard.firstsolar.com
+  hit_count: 0
+  path_echo_control: catch-all-200
+  soft_404_control:
+    path: /.well-known/first-solar-negative-control-7f3ab91c.json
+    status: 200
+    bytes: 24035
+  note: Microsoft Entra ID (Azure AD) app-service auth. Every path, including the negative control, 302s
+    into login.microsoftonline.com/authorize. No documents served.
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    note: soft-404 / catch-all HTML shell — not a document
+  - path: /.well-known/openid-configuration
+    status: 200
+    note: soft-404 / catch-all HTML shell — not a document
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    note: soft-404 / catch-all HTML shell — not a document
+  - path: /.well-known/oauth-protected-resource
+    status: 200
+    note: soft-404 / catch-all HTML shell — not a document
+  - path: /.well-known/api-catalog
+    status: 200
+    note: soft-404 / catch-all HTML shell — not a document
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    note: soft-404 / catch-all HTML shell — not a document
+  - path: /.well-known/ucp.json
+    status: 200
+    note: soft-404 / catch-all HTML shell — not a document
+  - path: /.well-known/acp.json
+    status: 200
+    note: soft-404 / catch-all HTML shell — not a document
+  - path: /.well-known/aauth-resource.json
+    status: 200
+    note: soft-404 / catch-all HTML shell — not a document
+  - path: /.well-known/agent-card.json
+    status: 200
+    note: soft-404 / catch-all HTML shell — not a document
+  - path: /.well-known/agent.json
+    status: 200
+    note: soft-404 / catch-all HTML shell — not a document
+  - path: /.well-known/apis.json
+    status: 200
+    note: soft-404 / catch-all HTML shell — not a document
+  - path: /apis.json
+    status: 200
+    note: soft-404 / catch-all HTML shell — not a document
+  - path: /apis.yml
+    status: 200
+    note: soft-404 / catch-all HTML shell — not a document
+- host: https://investor.firstsolar.com
+  hit_count: 0
+  path_echo_control: catch-all-200
+  soft_404_control:
+    path: /.well-known/first-solar-negative-control-7f3ab91c.json
+    status: 200
+    bytes: 11
+  note: Q4 Inc investor site. Every /.well-known/* path, including the negative control, returns HTTP
+    200 with the 11-byte body 'Invalid key'. Not documents.
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    note: soft-404 / catch-all HTML shell — not a document
+  - path: /.well-known/openid-configuration
+    status: 200
+    note: soft-404 / catch-all HTML shell — not a document
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    note: soft-404 / catch-all HTML shell — not a document
+  - path: /.well-known/oauth-protected-resource
+    status: 200
+    note: soft-404 / catch-all HTML shell — not a document
+  - path: /.well-known/api-catalog
+    status: 200
+    note: soft-404 / catch-all HTML shell — not a document
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    note: soft-404 / catch-all HTML shell — not a document
+  - path: /.well-known/ucp.json
+    status: 200
+    note: soft-404 / catch-all HTML shell — not a document
+  - path: /.well-known/acp.json
+    status: 200
+    note: soft-404 / catch-all HTML shell — not a document
+  - path: /.well-known/aauth-resource.json
+    status: 200
+    note: soft-404 / catch-all HTML shell — not a document
+  - path: /.well-known/agent-card.json
+    status: 200
+    note: soft-404 / catch-all HTML shell — not a document
+  - path: /.well-known/agent.json
+    status: 200
+    note: soft-404 / catch-all HTML shell — not a document
+  - path: /.well-known/apis.json
+    status: 200
+    note: soft-404 / catch-all HTML shell — not a document
+  - path: /apis.json
+    status: 404
+  - path: /apis.yml
+    status: 404
+x-hosts-not-resolvable:
+- host: api.firstsolar.com
+  note: present in Certificate Transparency logs; no public DNS answer (NXDOMAIN)
+- host: ecatproapi.firstsolar.com
+  note: CNAME firstsolar-ecatproapi.trafficmanager.net; no public A record
+- host: pmmapi.firstsolar.com
+  note: resolves to 24.52.122.79; TLS connection reset by peer
+- host: geo.firstsolar.com
+  note: CNAME firstsolar-geo.trafficmanager.net; no public A record
+- host: capacity.firstsolar.com
+  note: CNAME firstsolar-capacity.trafficmanager.net; no public A record
+- host: energyadvantage.firstsolar.com
+  note: CNAME energyadvantage.azurewebsites.net; no public A record

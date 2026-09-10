@@ -1,0 +1,102 @@
+generated: '2026-09-10'
+method: probed
+source: https://portal.firstsolar.com/.well-known/openid-configuration
+docs: https://portal.firstsolar.com/developer/PortalCustomLogin
+note: 'Served by the Salesforce Experience Cloud tenant that runs the First Solar Developer Portal (portal.firstsolar.com)
+  — First Solar''s own host and its own OIDC issuer. The endpoints and the scope vocabulary are Salesforce
+  platform-standard, not a First Solar-authored API contract: First Solar publishes no API product of
+  its own. Recorded because it is a real, unauthenticated, machine-readable document the provider serves.'
+summary:
+  types:
+  - oauth2
+  - openIdConnect
+  api_key_in: []
+  oauth2_flows:
+  - authorizationCode
+  grant_types_supported:
+  - authorization_code
+  - refresh_token
+  token_endpoint_auth_methods:
+  - client_secret_post
+  - client_secret_basic
+  - private_key_jwt
+  pkce:
+  - S256
+  dpop:
+  - RS256
+  - RS384
+  - RS512
+  - ES256
+  - ES384
+  - ES512
+  - EdDSA
+schemes:
+- name: OpenIDConnect
+  type: openIdConnect
+  openIdConnectUrl: https://portal.firstsolar.com/.well-known/openid-configuration
+  issuer: https://portal.firstsolar.com/developer
+  jwks_uri: https://portal.firstsolar.com/developer/id/keys
+  id_token_signing_alg_values_supported:
+  - RS256
+  subject_types_supported:
+  - public
+  claims_supported:
+  - active
+  - address
+  - email
+  - email_verified
+  - family_name
+  - given_name
+  - is_app_installed
+  - language
+  - locale
+  - name
+  - nickname
+  - organization_id
+  - phone_number
+  - phone_number_verified
+  - photos
+  - picture
+  - preferred_username
+  - profile
+  - sub
+  - updated_at
+  - urls
+  - user_id
+  - user_type
+  - zoneinfo
+  sources:
+  - well-known/first-solar-openid-configuration.json
+- name: OAuth2
+  type: oauth2
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://portal.firstsolar.com/developer/services/oauth2/authorize
+    tokenUrl: https://portal.firstsolar.com/developer/services/oauth2/token
+    refreshUrl: https://portal.firstsolar.com/developer/services/oauth2/token
+    scope_count: 36
+  introspection_endpoint: https://portal.firstsolar.com/developer/services/oauth2/introspect
+  revocation_endpoint: https://portal.firstsolar.com/developer/services/oauth2/revoke
+  registration_endpoint: https://portal.firstsolar.com/developer/services/oauth2/register
+  end_session_endpoint: https://portal.firstsolar.com/developer/services/auth/idp/oidc/logout
+  userinfo_endpoint: https://portal.firstsolar.com/developer/services/oauth2/userinfo
+  response_types_supported:
+  - code
+  - token
+  - token id_token
+  sources:
+  - well-known/first-solar-openid-configuration.json
+x-evidence:
+- url: https://portal.firstsolar.com/.well-known/openid-configuration
+  http_status: 200
+  content_type: application/json
+  fetched: '2026-09-10'
+- url: https://portal.firstsolar.com/developer/id/keys
+  http_status: 200
+  content_type: application/json
+  fetched: '2026-09-10'
+  note: JWKS returns real RSA signing keys
+- url: https://portal.firstsolar.com/developer/services/oauth2/token
+  http_status: 400
+  fetched: '2026-09-10'
+  note: unauthenticated POST returns RFC 6749 {"error":"unsupported_grant_type"} — endpoint is live
