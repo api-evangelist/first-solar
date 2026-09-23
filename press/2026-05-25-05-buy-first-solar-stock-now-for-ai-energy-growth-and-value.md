@@ -1,7 +1,9 @@
 ---
 title: Buy First Solar Stock Now for AI Energy Growth and Value
 url: https://www.zacks.com/commentary/2764875/buy-first-solar-stock-now-for-ai-energy-growth-and-value
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"First Solar" press release artificial intelligence'
 position: 5
 source: serpapi-google
