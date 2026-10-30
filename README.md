@@ -64,21 +64,101 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-This is a repository for tracking the APIs, SDKs, and other developer resources for First Solar.
+First Solar, Inc. (NASDAQ: FSLR) is the largest American manufacturer of solar modules and the leading producer of thin-film cadmium telluride (CdTe) photovoltaic technology, an alternative to conventional crystalline silicon. It designs and manufactures Series 6 and Series 7 modules at vertically integrated factories in Ohio, Alabama, Louisiana, India, Malaysia and Vietnam, and supports utility-scale PV projects with energy prediction, plant design and post-sales technical services. First Solar publishes no public API, developer program or machine-readable contract. Its "Developer Portal" is a Salesforce Experience Cloud site for solar project developers and EPC partners, not software developers, and requires a login. PlantPredict, the energy-modelling API and Python SDK First Solar built, was acquired by Terabase Energy in October 2021 and is catalogued against Terabase.
 
-First Solar is a leading global provider of comprehensive photovoltaic (PV) solar energy solutions, designing and manufacturing thin-film solar modules.
+**Areas:** Solar · Energy · Renewable Energy · Manufacturing · Fortune 1000 · Photovoltaics · Thin Film · Utility-Scale Solar · Clean Energy
 
-## APIs
+## First Solar on APIs.io
 
-No public developer portal or open APIs have been identified at this time.
+Everything profiled for First Solar is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/first-solar/](https://apis.io/providers/first-solar/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### Published properties
 
-- Solar
-- Energy
-- Renewable Energy
-- Manufacturing
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## Properties
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [First Solar Authentication](https://apis.io/security/first-solar/first-solar-authentication/)
+- [First Solar Domain Security](https://apis.io/security/first-solar/first-solar-domain-security/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [First Solar Scopes](https://apis.io/scopes/first-solar/first-solar-scopes/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [First Solar Plans Pricing](https://apis.io/plans/first-solar/first-solar-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [First Solar Rate Limits](https://apis.io/rate-limits/first-solar/first-solar-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.firstsolar.com)
+- [Support](https://www.firstsolar.com/Products/Post-Sales-Support)
+- [Terms of service](https://www.firstsolar.com/Policies/Terms-of-Use)
+- [Privacy policy](https://www.firstsolar.com/Policies/Privacy-Policy)
+
+## API Evangelist rating
+
+**Kin Score 17.7** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 48.2 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 16.7 |
+| Access clarity | 21.1 |
+
+**Agent readiness 17.6** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | yes |
+| Agentic Commerce | — |
+
+**Regulatory alignment 34.4** — Energy & Utilities
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/first-solar/](https://apis.io/providers/first-solar/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for First Solar: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/first-solar/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
